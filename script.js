@@ -34,7 +34,7 @@ function calcTip() {
 }
 
 function calcTotalAmount() {
-  totalAmount = billAmount + tipAmount;
+  totalAmount = billAmount + calcTip();
   displayTotal.textContent = `Total Amount to pay: $${totalAmount}`;
   return totalAmount;
 }
