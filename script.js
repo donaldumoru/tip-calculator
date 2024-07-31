@@ -7,22 +7,27 @@ const errorMessage = document.querySelector('.error-message');
 const rangeSlider = document.querySelector('.range-slider');
 const sliderValue = document.querySelector('.slider-value');
 
+// Initialize bill amount and tip rate
 let billAmount;
 let tipRate;
 
+// Set slider value to default range value
 sliderValue.textContent = `Tip Percentage: ${rangeSlider.value}%`;
 
+// Function to adjust the slider value
 rangeSlider.oninput = function () {
   sliderValue.textContent = `Tip Percentage: ${rangeSlider.value}%`;
   clearDisplay();
   return rangeSlider.value;
 };
 
+// Function to clear display fields
 function clearDisplay() {
   displayTip.textContent = '';
   displayTotal.textContent = '';
 }
 
+// Function for the tip calculation logic
 function tipCalculator() {
   if (billAmount === 0) {
     clearDisplay();
@@ -46,21 +51,10 @@ function tipCalculator() {
   }
 }
 
+// Event listener to execute tip calculation function based on user input
 calcTip.addEventListener('click', function () {
   billAmount = Number(document.querySelector('.bill-amount').value);
   tipRate = rangeSlider.value;
 
   tipCalculator();
 });
-
-// const calculateTip = function (bill, tipRate) {
-//   let tipAmount = bill * (tipRate / 100);
-
-//   tipAmount = Math.round(tipAmount * 10) / 10;
-//   console.log(`Tip Amount: ${tipAmount}`);
-
-//   let totalAmount = bill + tipAmount;
-//   return totalAmount;
-// };
-
-// console.log(calculateTip(11, 50));
