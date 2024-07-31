@@ -36,6 +36,7 @@ function calcTip() {
 function calcTotalAmount() {
   totalAmount = billAmount + tipAmount;
   displayTotal.textContent = `Total Amount to pay: $${totalAmount}`;
+  return totalAmount;
 }
 
 // Function to clear display fields
