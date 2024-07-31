@@ -18,6 +18,7 @@ sliderValue.textContent = `Tip Percentage: ${rangeSlider.value}%`;
 rangeSlider.oninput = function () {
   sliderValue.textContent = `Tip Percentage: ${rangeSlider.value}%`;
   clearDisplay();
+  errorMessage.textContent = '';
   return rangeSlider.value;
 };
 
