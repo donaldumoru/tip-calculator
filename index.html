@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="tip-container">
+      <div class="tip-wrapper">
+        <input
+          class="bill-amount"
+          type="text"
+          placeholder="Enter bill amount"
+        />
+        <!-- <input class="tip-rate" type="text" placeholder="Enter tip rate" /> -->
+
+        <input
+          class="range-slider"
+          type="range"
+          min="5"
+          max="25"
+          value="10"
+          step="1"
+        />
+
+        <button class="calculate-tip">Calculate</button>
+
+        <p class="slider-value"></p>
+
+        <p class="error-message"></p>
+        <p class="display-tip"></p>
+        <p class="display-total"></p>
+      </div>
+    </div>
+  </body>
+</html>
